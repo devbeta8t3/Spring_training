@@ -10,3 +10,6 @@
 4. CSS, bootstrap
 5. JavaScript, jQuery, Ajax
 6. Oracle DB
+
+실습 참고사이트
+https://bin-repository.tistory.com/m/94
