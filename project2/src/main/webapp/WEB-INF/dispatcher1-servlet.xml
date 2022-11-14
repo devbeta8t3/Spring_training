@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- xml로 의존성 주입(Dependency Injection) -->
+	
+	<bean id="/test" class="com.example.controller.TestController_POJO">  
+		<!-- collaborators and configuration for this bean go here -->
+	</bean>
+
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+		<property name="prefix" value="/WEB-INF/view/" />	<!-- 앞 글자들 -->
+		<property name="suffix" value=".jsp" /> 				<!-- 뒷 글자들 -->
+	</bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
