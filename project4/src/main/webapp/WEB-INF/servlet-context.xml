@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- 	<bean id="/test" class="com.example.controller.TestController_POJO" /> -->  
+
+	<context:component-scan base-package="com.example.controller" />
+	
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+		<property name="prefix" value="/WEB-INF/view/" />	<!-- 앞 글자들 -->
+		<property name="suffix" value=".jsp" /> 				<!-- 뒷 글자들 -->
+	</bean>
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8"></property>
+		<!-- 1024 * 1024 * 10 bytes 10MB -->
+		<property name="maxUploadSize" value="104857560"></property>
+		<!-- 1024 * 1024 * 2 bytes 2MB -->
+		<property name="maxUploadSizePerFile" value="2097152"></property>
+		<property name="uploadTempDir" value="file:/E:/upload/tmp"></property>
+		<property name="maxInMemorySize" value="10485756"></property>
+	</bean>
+
+
+</beans>
